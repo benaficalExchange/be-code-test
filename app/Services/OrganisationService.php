@@ -20,8 +20,9 @@ class OrganisationService
      *
      * @return Organisation
      */
-    public function create(array $attributes): Organisation
+    public function createOrganisation(array $attributes): Organisation
     {
+
         $organisation = Organisation::create([
                 'name'          => $attributes['name'],
                 'subscribed'    => $attributes['subscribed'],

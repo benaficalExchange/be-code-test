@@ -30,7 +30,7 @@ class Organisation extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name','trial_end', 'subscribed'];
+    protected $fillable = ['name','trial_end', 'subscribed','owner_user_id'];
 
     /**
      * @var array
