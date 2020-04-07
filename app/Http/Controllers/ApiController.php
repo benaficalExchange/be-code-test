@@ -111,6 +111,9 @@ class ApiController extends Controller
      */
     public function transformItem(string $key, $data, $includes = null): self
     {
+
+
+
         $item = fractal()
             ->item($data, $this->getTransformer())
             ->serializeWith(self::getSerializer())

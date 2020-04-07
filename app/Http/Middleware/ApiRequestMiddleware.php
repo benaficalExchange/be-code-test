@@ -21,6 +21,7 @@ class ApiRequestMiddleware
      */
     public function handle(Request $request, \Closure $next)
     {
+
         if (\is_string($request->route()->action['uses'])) {
             $req = explode('\\', $request->route()->action['uses']);
 

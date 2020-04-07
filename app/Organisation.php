@@ -30,20 +30,22 @@ class Organisation extends Model
     /**
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = ['name','trial_end', 'subscribed'];
 
     /**
      * @var array
      */
     protected $dates = [
-        'deleted_at',
+        'trial_end',
+        'updated_at',
+        'created_at'
     ];
 
     /**
      * @return BelongsTo
      */
-    public function owner(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'owner_user_id');
     }
 }
